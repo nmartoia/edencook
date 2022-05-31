@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/affdc3fe7d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery.flexslider.js"></script>
+    <script>
+      $(window).load(function() {
+        $('.flexslider').flexslider();
+        animation: "slide"
+  });
+    </script>
     <title>Vite App</title>
   </head>
   <body>
@@ -18,10 +26,10 @@
           <i class="fa-solid fa-bars"></i>
           <nav>
             <button id="close">X</button>
-            <ul>
-              <li><a href="#">recipe</a></li>
-              <li><a href="#">shop</a></li>
-              <li><a href="#">blog</a></li>
+            <ul id="navul">
+              <li><a href="#liste">recipe</a></li>
+              <li><a href="#" id="shop">shop</a></li>
+              <li><a href="#blog">blog</a></li>
               <li><a href="#">contact</a></li>
             </ul>
           </nav>
@@ -29,9 +37,15 @@
       </ul>
     </header>
     <main>
+      <div class="shopping">
+        <h3>votre shopping list</h3>
+        <ul id="achat">
+        </ul>
+        <button>acheter</button>
+      </div>
       <ul id="liste">
         <li class="recette">
-          <ul class="flex">
+          <ul class="flex re">
             <li class="gauche">
               <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
               <h2>recette du placeholder</h2>
@@ -40,16 +54,14 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
             </li>
           </ul>
-          <ul>
-            <li class="ingredient">
-              1 lorem
-              4 ipsum 
-              2 dolor
-            </li>
+          <ul class="ingredient">
+            <li class="article">1 lorem</li><button class="add">ajouter</button> 
+            <li class="article">4 ipsum</li><button class="add">ajouter</button>
+            <li class="article">2 dolor</li><button class="add">ajouter</button>
           </ul>
         </li>
         <li class="recette">
-          <ul class="flex">
+          <ul class="flex re">
             <li class="gauche">
               <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
               <h2>recette du placeholder</h2>
@@ -58,16 +70,14 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
             </li>
           </ul>
-          <ul>
-            <li class="ingredient">
-              1 lorem
-              4 ipsum 
-              2 dolor
-            </li>
+          <ul class="ingredient">
+            <li class="article">1 lorem</li><button class="add">ajouter</button> 
+            <li class="article">4 ipsum</li><button class="add">ajouter</button>
+            <li class="article">2 dolor</li><button class="add">ajouter</button>
           </ul>
         </li>
         <li class="recette">
-          <ul class="flex">
+          <ul class="flex re">
             <li class="gauche">
               <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
               <h2>recette du placeholder</h2>
@@ -76,29 +86,67 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
             </li>
           </ul>
-          <ul>
-            <li class="ingredient">
-              1 lorem
-              4 ipsum 
-              2 dolor
-            </li>
+          <ul class="ingredient">
+            <li class="article">1 lorem</li><button class="add">ajouter</button> 
+            <li class="article">4 ipsum</li><button class="add">ajouter</button>
+            <li class="article">2 dolor</li><button class="add">ajouter</button>
           </ul>
         </li>
       </ul>
       <ul id="blog">
         <li class="blog">
-          <ul>
-            <li class="gauche">
-              <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
-              <h2>placeholder_du_69</h2>
-            </li>
-            <li class="droite">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
-            </li>
-          </ul>
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <ul>
+                  <li>
+                    <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
+                    <h2>placeholder_du_69</h2>
+                  </li>
+                  <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
+                    <h2>placeholder_du_6109</h2>
+                  </li>
+                  <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
+                    <h2>placeholder_du_1000069</h2>
+                  </li>
+                  <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <img src="https://via.placeholder.com/150x100" alt="placeholder de 150 par 100 pixel">
+                    <h2>placeholder_du_69</h2>
+                  </li>
+                  <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error amet nisi nam officiis, voluptas quisquam animi minima dolore. </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </main>
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

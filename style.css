@@ -2,6 +2,7 @@ html{
   font-size:62.5%;
   box-sizing:border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body{
   margin:0;
@@ -24,7 +25,7 @@ nav{
   position: absolute;
   font-size: 1.6rem;
   padding: 0 5rem;
-  background: cyan;
+  background: url(https://downloadwap.com/thumbs3/screensavers/d/3/abstract/rainbowtwilightwap.com.gif);
   transition: right 0.5s;
 }
 #close{
@@ -33,6 +34,18 @@ nav{
 }
 header li{
     padding: 1rem;
+}
+.shopping{
+  position: absolute;
+  background: url(https://downloadwap.com/thumbs3/screensavers/d/3/abstract/rainbowtwilightwap.com.gif);
+  width: 90vw;
+  right: -10000px;
+  height: 200px;
+  overflow-y: scroll;
+  transition: right 0.5s;
+}
+#achat li{
+  font-size: 1.6rem;
 }
 header img{
   border-radius: 100%;
@@ -59,6 +72,7 @@ p{
   font-size: 1.6rem;
 }
 #blog{
+  height: 19rem;
   border: solid 0.8rem gray;
 }
 .blog>ul{
