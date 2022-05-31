@@ -26,12 +26,19 @@ header i{
   font-size: 4.5rem;
   margin: 0 1rem;
 }
+#liste{
+  overflow-y: scroll;
+  height: 14.388rem;
+}
 .recette>ul{
   display: flex;
+  margin: 1rem 0;
 }
 .gauche{
   border-right: 0.8rem solid gray;
-  border-radius: 1rem 1rem 0 0;
+}
+.gauche,.droite{
+  padding: 0 0.8rem;
 }
 p{
   font-size: 1.6rem;
