@@ -1,20 +1,35 @@
 html{
   font-size:62.5%;
   box-sizing:border-box;
+  overflow-x: hidden;
 }
 body{
   margin:0;
 }
-header,main{
+header,#liste{
   border: solid 0.8rem gray;
+  margin: 0;
 }
 ul{
   list-style: none;
   padding: 0;
 }
-header ul{
+header>ul{
   display: flex;
   justify-content: space-between;
+}
+nav{
+  right: -500px;
+  top: 0;
+  position: absolute;
+  font-size: 1.6rem;
+  padding: 0 5rem;
+  background: cyan;
+  transition: right 0.5s;
+}
+#close{
+  position: absolute;
+  right: 0;
 }
 header li{
     padding: 1rem;
@@ -28,9 +43,9 @@ header i{
 }
 #liste{
   overflow-y: scroll;
-  height: 14.388rem;
+  height: 30rem;
 }
-.recette>ul{
+.flex{
   display: flex;
   margin: 1rem 0;
 }
@@ -41,5 +56,21 @@ header i{
   padding: 0 0.8rem;
 }
 p{
+  font-size: 1.6rem;
+}
+#blog{
+  border: solid 0.8rem gray;
+}
+.blog>ul{
+  display: flex;
+  padding: 1rem;
+}
+.blog>ul>.gauche{
+  border: 0;
+}
+.ingredient{
+  background: yellow;
+  display: none;
+  list-style: circle;
   font-size: 1.6rem;
 }
